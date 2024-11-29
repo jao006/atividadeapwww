@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adidas - Promoção Exclusiva</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f8f8f8;
+    }
+
+    /* Estilo do cabeçalho */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: #000;
+      color: #fff;
+    }
+
+    header .logo {
+      height: 50px;
+    }
+
+    header nav {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    header nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    header nav a:hover {
+      color: #007BFF;
+    }
+
+    /* Imagem inicial com texto */
+    .intro {
+      position: relative;
+      height: 100vh;
+      background: url('https://anhor.uz/wp-content/uploads/2024/03/1687420815329.png') no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+    }
+
+    .intro .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+
+    .intro-content {
+      position: relative;
+      z-index: 2;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .intro-content h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .intro-content p {
+      font-size: 1.5rem;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Seção do formulário */
+    .form-section {
+      padding: 2rem;
+      background: #fff;
+      text-align: center;
+    }
+
+    .form-section h2 {
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+      color: #222;
+    }
+
+    .promo-form {
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .promo-form label {
+      text-align: left;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      color: #555;
+    }
+
+    .promo-form input,
+    .promo-form select {
+      margin-bottom: 1rem;
+      padding: 0.7rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    .promo-form button {
+      padding: 0.8rem;
+      border: none;
+      background: #000;
+      color: #fff;
+      font-size: 1.1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .promo-form button:hover {
+      background: #333;
+    }
+    footer{
+      text-align: center;
+      background-color: #222;
+      color: white;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .intro {
+        height: 60vh;
+      }
+
+      .intro-content h1 {
+        font-size: 2rem;
+      }
+
+      .intro-content p {
+        font-size: 1rem;
+      }
+
+      .promo-form {
+        width: 90%;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      header nav {
+        margin-top: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- Logo -->
+    <img src="https://static.vecteezy.com/ti/vetor-gratis/p1/10994325-logotipo-adidas-branco-simbolo-design-de-roupas-icone-abstrato-futebol-ilustracaoial-com-fundo-preto-gratis-vetor.jpg" alt="Logo Adidas" class="logo">
+    <!-- Navegação -->
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#contact">Contato</a>
+      <a href="#about">Sobre</a>
+    </nav>
+  </header>
+
+  <section class="intro">
+    <div class="overlay"></div>
+    <div class="intro-content">
+      <h1>Ganhe Seu Cupom Promocional</h1>
+      <p>Descontos exclusivos para você!</p>
+    </div>
+  </section>
+
+  <section class="form-section">
+    <h2>Preencha para receber seu cupom</h2>
+    <form class="promo-form">
+      <label for="name">Nome:</label>
+      <input type="text" id="name" name="name" placeholder="Seu nome" required>
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+
+      <label for="city">Cidade:</label>
+      <input type="text" id="city" name="city" placeholder="Sua cidade" required>
+
+      <label for="contact">Contato:</label>
+      <input type="tel" id="contact" name="contact" placeholder="Telefone ou WhatsApp" required>
+      <label for="contact">Cupom</label>
+      <input type="tel" id="contact" name="contact" placeholder="Digite Seu Cumpom" required>
+
+      <label for="customer">Já é cliente Adidas?</label>
+      <select id="customer" name="customer" required>
+        <option value="" disabled selected>Selecione</option>
+        <option value="yes">Sim</option>
+        <option value="no">Não</option>
+      </select>
+
+      <button type="submit">Solicitar Cupom</button>
+    </form>
+  </section>
+  <footer>
+    <p>Todos os Direitos Reservados 2024</p>
+  </footer>
+</body>
+</html>
